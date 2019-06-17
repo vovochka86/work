@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: parse-example-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: parse-example
+    spec:
+      containers:
+      - name: work
+        image: vovan2019/work:01
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000

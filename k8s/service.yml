@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: parse-example
+  labels:
+    app: parse-example
+spec:
+  selector:
+    app: parse-example
+  ports:
+  - port: 3000
+    protocol: TCP
+    nodePort: 30002
+  type: LoadBalancer
